@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>800</width>
-    <height>570</height>
+    <height>599</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -20,15 +20,17 @@
    <widget class="QPushButton" name="start_btn">
     <property name="geometry">
      <rect>
-      <x>520</x>
-      <y>350</y>
+      <x>540</x>
+      <y>380</y>
       <width>221</width>
       <height>101</height>
      </rect>
     </property>
     <property name="styleSheet">
      <string notr="true">background-color: rgb(13, 183, 168);
+
 color: rgb(255, 255, 255);
+color: rgb(27, 27, 27);
 font: 26pt &quot;Tw Cen MT&quot;;</string>
     </property>
     <property name="text">
@@ -39,27 +41,72 @@ font: 26pt &quot;Tw Cen MT&quot;;</string>
     <property name="geometry">
      <rect>
       <x>0</x>
-      <y>70</y>
-      <width>781</width>
-      <height>251</height>
+      <y>80</y>
+      <width>821</width>
+      <height>271</height>
      </rect>
+    </property>
+    <property name="tabletTracking">
+     <bool>true</bool>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
     </property>
     <property name="text">
      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/newPrefix/logo(2).png&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>-10</x>
+      <y>10</y>
+      <width>831</width>
+      <height>611</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-image: url(:/newPrefix1/wallpaper-stains-liquid-paint-mixing-1616133483-1024x768.jpg);</string>
+    </property>
+    <property name="text">
+     <string>TextLabel</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>570</y>
+      <width>850</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>TextLabel</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>-10</y>
+      <width>821</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>TextLabel</string>
+    </property>
+   </widget>
+   <zorder>label_2</zorder>
+   <zorder>label</zorder>
+   <zorder>start_btn</zorder>
+   <zorder>label_3</zorder>
+   <zorder>label_4</zorder>
   </widget>
-  <widget class="QMenuBar" name="menubar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>800</width>
-     <height>26</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources>
   <include location="new.qrc"/>

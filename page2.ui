@@ -36,7 +36,7 @@ color: rgb(255, 255, 255);</string>
     <property name="styleSheet">
      <string notr="true">background-color: rgb(13, 183, 168);
 font:  26pt &quot;Tw Cen MT&quot;;
-color: rgb(255, 255, 255);</string>
+color: rgb(27, 27, 27);</string>
     </property>
     <property name="text">
      <string>IMAGE</string>
@@ -54,7 +54,7 @@ color: rgb(255, 255, 255);</string>
     <property name="styleSheet">
      <string notr="true">background-color: rgb(13, 183, 168);
 font: 26pt &quot;Tw Cen MT&quot;;
-color: rgb(255, 255, 255);</string>
+color: rgb(27, 27, 27);</string>
     </property>
     <property name="text">
      <string>FOLDER</string>
@@ -85,7 +85,7 @@ color: rgb(255, 255, 255);</string>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(27, 27, 27);
+     <string notr="true">background-color: rgb(7, 7, 7);
 font: 75 14pt &quot;Tw Cen MT&quot;;</string>
     </property>
     <property name="text">
@@ -98,6 +98,40 @@ font: 75 14pt &quot;Tw Cen MT&quot;;</string>
      <number>1</number>
     </property>
    </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>-10</x>
+      <y>-10</y>
+      <width>831</width>
+      <height>611</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-image: url(:/wallpaper-stains-liquid-paint-mixing-1616133483-1024x768.jpg);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>-10</x>
+      <y>-10</y>
+      <width>821</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <zorder>label_2</zorder>
+   <zorder>pushImageButton</zorder>
+   <zorder>pushFolderButton</zorder>
+   <zorder>label</zorder>
+   <zorder>label_3</zorder>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
