@@ -13,6 +13,6 @@
     <file>wallpaper1.jpg</file>
   </qresource>
   <qresource prefix="newPrefix">
-    <file>logo.png</file>
+    <file>logobig.png</file>
   </qresource>
 </RCC>

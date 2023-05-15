@@ -38,98 +38,140 @@
   </property>
   <property name="styleSheet">
    <string notr="true">background-color: rgb(0, 0, 0);
-background-image: url(:/wallpaper1.jpg);
 color: rgb(255, 255, 255);</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <layout class="QGridLayout" name="gridLayout">
-    <item row="1" column="0">
-     <widget class="QLabel" name="label">
-      <property name="sizePolicy">
-       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-        <horstretch>0</horstretch>
-        <verstretch>0</verstretch>
-       </sizepolicy>
-      </property>
-      <property name="minimumSize">
-       <size>
-        <width>1898</width>
-        <height>717</height>
-       </size>
-      </property>
-      <property name="maximumSize">
-       <size>
-        <width>1898</width>
-        <height>717</height>
-       </size>
-      </property>
-      <property name="baseSize">
-       <size>
-        <width>1898</width>
-        <height>717</height>
-       </size>
-      </property>
-      <property name="font">
-       <font>
-        <family>Tw Cen MT</family>
-        <pointsize>14</pointsize>
-        <weight>9</weight>
-        <italic>false</italic>
-        <bold>false</bold>
-       </font>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(7, 7, 7);
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>40</y>
+      <width>1700</width>
+      <height>717</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>1700</width>
+      <height>717</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>1700</width>
+      <height>717</height>
+     </size>
+    </property>
+    <property name="baseSize">
+     <size>
+      <width>1898</width>
+      <height>717</height>
+     </size>
+    </property>
+    <property name="font">
+     <font>
+      <family>Tw Cen MT</family>
+      <pointsize>14</pointsize>
+      <weight>9</weight>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(7, 7, 7);
 font: 75 14pt &quot;Tw Cen MT&quot;;</string>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignCenter</set>
-      </property>
-      <property name="margin">
-       <number>1</number>
-      </property>
-     </widget>
-    </item>
-    <item row="3" column="0">
-     <widget class="QPushButton" name="okButton">
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(13, 183, 168);
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+    <property name="margin">
+     <number>1</number>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="okButton">
+    <property name="geometry">
+     <rect>
+      <x>1150</x>
+      <y>820</y>
+      <width>301</width>
+      <height>101</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(13, 183, 168);
 font: 26pt &quot;Tw Cen MT&quot;;
 color: rgb(27, 27, 27);</string>
-      </property>
-      <property name="text">
-       <string>OK</string>
-      </property>
-     </widget>
-    </item>
-    <item row="6" column="0">
-     <widget class="QPushButton" name="backButton">
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(13, 183, 168);
+    </property>
+    <property name="text">
+     <string>OK</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="backButton">
+    <property name="geometry">
+     <rect>
+      <x>470</x>
+      <y>820</y>
+      <width>301</width>
+      <height>101</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(13, 183, 168);
 font:  26pt &quot;Tw Cen MT&quot;;
 color: rgb(27, 27, 27);</string>
-      </property>
-      <property name="text">
-       <string>BACK</string>
-      </property>
-     </widget>
-    </item>
-    <item row="2" column="0">
-     <widget class="QPushButton" name="rotateButton">
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(17, 17, 17);
+    </property>
+    <property name="text">
+     <string>BACK</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="rotateButton">
+    <property name="geometry">
+     <rect>
+      <x>810</x>
+      <y>820</y>
+      <width>301</width>
+      <height>101</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(17, 17, 17);
 font:  23pt &quot;Tw Cen MT&quot;;
 color: rgb(255, 255, 255);</string>
-      </property>
-      <property name="text">
-       <string>ROTATE</string>
-      </property>
-     </widget>
-    </item>
-   </layout>
+    </property>
+    <property name="text">
+     <string>ROTATE</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>20</y>
+      <width>1921</width>
+      <height>951</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-image: url(:/wallpaper1.jpg);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <zorder>label_2</zorder>
+   <zorder>label</zorder>
+   <zorder>okButton</zorder>
+   <zorder>backButton</zorder>
+   <zorder>rotateButton</zorder>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
