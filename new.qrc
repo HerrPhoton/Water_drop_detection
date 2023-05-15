@@ -1,5 +1,11 @@
 <RCC>
   <qresource/>
+  <qresource prefix="newPrefix">
+    <file>wallpaper1.jpg</file>
+  </qresource>
+  <qresource prefix="3">
+    <file>wallpaper.jpg</file>
+  </qresource>
   <qresource prefix="newPrefix1">
     <file>wallpaper-stains-liquid-paint-mixing-1616133483-1024x768.jpg</file>
   </qresource>
@@ -7,6 +13,6 @@
     <file>wallpaper1.jpg</file>
   </qresource>
   <qresource prefix="newPrefix">
-    <file>logo(2).png</file>
+    <file>logo.png</file>
   </qresource>
 </RCC>
