@@ -1,23 +1,23 @@
 import SaveLoadModel
 import BatchManager
-import cv2
+from tqdm import tqdm
 import numpy as np
+import cv2
 import math
 import os
-from tqdm import tqdm
 import time
 
-
-def get_mask(arr):
-    arr = np.argmax(arr, 2)
-    pic = np.empty((arr.shape[0], arr.shape[1], 3), dtype=np.int)
-    pic[arr == 0] = np.array([0, 0, 0])
-    pic[arr == 1] = np.array([255, 255, 255])
-    pic[arr == 2] = np.array([255, 0, 0])
-    return pic
-
-
 def get_circle(arr):
+    """Searches related areas and returns a list of dictionaries:
+         #Arguments:
+             arr: image
+         #Returns:
+             list of dictionaries containing information about each related area
+             x,y - center of gravity
+             size - area
+             x_min, y_min, x_len, y_len - bounding box
+             r - radius of the circle whose area is equal to the found area
+    """
     inner = np.copy(arr)
     inner[inner != 1] = 0
     N, labels, stats, centroids = cv2.connectedComponentsWithStats(inner.astype(np.int8))
@@ -36,10 +36,15 @@ def get_circle(arr):
     return result
 
 
-def work(INPUTDIR, OUTPUTDIR, img_postfix=".png"):
-
-    if INPUTDIR is not None:
-        DATADIR = INPUTDIR
+def work(INPUTDIR, OUTPUTDIR, img_mask=".png"):
+    """Runs a neural network on new data:
+         #Arguments:
+             INPUTDIR: path to the folder with images
+             OUTPUTDIR: path to save results
+             img_mask: image suffix to process
+    """
+    if INPUTDIR is None:
+        INPUTDIR = "../data"
     if OUTPUTDIR is None:
         OUTPUTDIR = "../output"
 
@@ -47,7 +52,7 @@ def work(INPUTDIR, OUTPUTDIR, img_postfix=".png"):
 
     IMG_SIZE = 32 * 8
 
-    original = BatchManager.Open_Images(DATADIR, BatchManager.Files_in_dir(DATADIR, img_postfix))
+    original = BatchManager.Open_Images(INPUTDIR, BatchManager.Files_in_dir(INPUTDIR, img_mask))
     img_n = len(original)
     x_train = np.stack(list(map(lambda x: cv2.resize(x, dsize=(IMG_SIZE, IMG_SIZE), interpolation=cv2.INTER_LINEAR), original)))
 
@@ -74,8 +79,6 @@ def work(INPUTDIR, OUTPUTDIR, img_postfix=".png"):
             orig[int(c['y']), int(c['x'])] = [0, 255, 0]
 
         cv2.imwrite(OUTPUTDIR + "/" + str(i) + "_frame.png", orig)
-
-    print("Graphs for" + INPUTDIR)
 
     end = 1
 
