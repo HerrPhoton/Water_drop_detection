@@ -56,7 +56,7 @@ def work(INPUTDIR, OUTPUTDIR, img_mask=".png"):
     img_n = len(original)
     x_train = np.stack(list(map(lambda x: cv2.resize(x, dsize=(IMG_SIZE, IMG_SIZE), interpolation=cv2.INTER_LINEAR), original)))
 
-    model = SaveLoadModel.LoadModel("../model", "Sonya")
+    model = SaveLoadModel.LoadModel("../model", "Model")
 
     start_time = time.time()
     predict = model.predict(x_train)
