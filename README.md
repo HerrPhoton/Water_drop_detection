@@ -1,5 +1,7 @@
 # Water drop detection
 
+<img src = "https://img.shields.io/badge/Python-00D5D1?style=for-the-badge&logo=python&logoColor=FFFFFF"">
+
 ---
 
 ![](https://github.com/HerrPhoton/Water_drop_detection/blob/Documentation/images/logo(2).jpg)
