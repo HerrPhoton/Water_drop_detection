@@ -1,7 +1,9 @@
 import os
 import cv2
 import sys
-import TestNetwork_
+from os.path import dirname, join, abspath
+sys.path.insert(0, abspath(join(dirname(__file__), '..')))
+from NN.TestNetwork_ import work
 from PyQt5.QtCore import Qt
 from PyQt5.uic import loadUi
 from PyQt5 import QtWidgets, QtGui, QtCore
@@ -13,13 +15,13 @@ def detect_image(filepath, output):
     '''
     Принимает путь до изображения и название папки для сохранения результата и отправляет это в функцию для детектирования капель.
     '''
-    TestNetwork_.work(filepath, output,".jpg", mode = "picture")
+    work(filepath, output,".jpg", mode = "picture")
 
 def detect_folder(filepath, output):
     '''
     Принимает путь до папки и название папки для сохранения результата и отправляет это в функцию для детектирования капель.
     '''
-    TestNetwork_.work(filepath, output,".jpg")
+    work(filepath, output,".jpg")
 
 class WelcomeScreen(QMainWindow):
     ''' 
@@ -27,11 +29,11 @@ class WelcomeScreen(QMainWindow):
     '''
     def __init__(self, widget):
         super(WelcomeScreen,self).__init__()
-        loadUi("ui/page1.ui",self)
+        loadUi("src/ui/ui/page1.ui",self)
         self.widget = widget
-        pixmap = QPixmap('logo/logobig.png')
+        pixmap = QPixmap('src/ui/logo/logobig.png')
         self.label.setPixmap(pixmap)
-        self.label_2.setPixmap(QPixmap('logo/wallpaper1.jpg'))
+        self.label_2.setPixmap(QPixmap('src/ui/logo/wallpaper1.jpg'))
         self.start_btn.clicked.connect(lambda: self.start_click())
            
     def start_click(self):
@@ -46,10 +48,10 @@ class SelectScreen(QMainWindow):
     '''
     def __init__(self, widget):
         super(SelectScreen,self).__init__()
-        loadUi("ui/page2.ui",self)
+        loadUi("src/ui/ui/page2.ui",self)
         self.widget = widget
         self.setAcceptDrops(True)
-        self.label_2.setPixmap(QPixmap('logo/wallpaper1.jpg'))
+        self.label_2.setPixmap(QPixmap('src/ui/logo/wallpaper1.jpg'))
         self.pushFolderButton.clicked.connect(lambda: self.open_folder())
         self.pushImageButton.clicked.connect(lambda: self.open_image())
     
@@ -110,11 +112,11 @@ class ImagePretrainScreen(QMainWindow):
     '''
     def __init__(self, file, widget):
         super(ImagePretrainScreen,self).__init__()
-        loadUi("ui/page3_image.ui",self)
+        loadUi("src/ui/ui/page3_image.ui",self)
         self.file = file
         self.widget = widget
         self.pixmap = QPixmap(file)
-        self.label_2.setPixmap(QPixmap('logo/wallpaper1.jpg'))
+        self.label_2.setPixmap(QPixmap('src/ui/logo/wallpaper1.jpg'))
 
         super().layout().activate()
         self.label.setPixmap(self.pixmap.scaled(1700,717, QtCore.Qt.KeepAspectRatio))
@@ -146,10 +148,10 @@ class FolderPretrainScreen(QMainWindow):
     '''
     def __init__(self, file, widget):
         super(FolderPretrainScreen,self).__init__()
-        loadUi("ui/page3_folder.ui",self)
+        loadUi("src/ui/ui/page3_folder.ui",self)
         self.widget = widget
         self.label.setText("Your choice: \n" + file)
-        self.label_3.setPixmap(QPixmap('logo/wallpaper1.jpg'))
+        self.label_3.setPixmap(QPixmap('src/ui/logo/wallpaper1.jpg'))
         print(file)
         
         self.toNeuralButton.clicked.connect(lambda: self.findDrops(file))
@@ -173,13 +175,13 @@ class EditScreen(QMainWindow):
     '''
     def __init__(self, file, widget):
         super(EditScreen,self).__init__()
-        loadUi("ui/page4_image.ui",self)
+        loadUi("src/ui/ui/page4_image.ui",self)
         self.rotation = 0
         self.widget = widget
         self.pixmap = QPixmap(file)
         self.photos = [QPixmap(file)]
         self.edit_pixmap = QPixmap(file)
-        self.label_2.setPixmap(QPixmap('logo/wallpaper1.jpg'))
+        self.label_2.setPixmap(QPixmap('src/ui/logo/wallpaper1.jpg'))
         self.label.setPixmap(QPixmap(file).scaled(1700,717, QtCore.Qt.KeepAspectRatio))
         
         self.okButton.clicked.connect(lambda: self.OK_button(file))
@@ -240,9 +242,9 @@ class FolderResultScreen(QMainWindow):
     '''
     def __init__(self, input_folder, flag, widget):
         super(FolderResultScreen,self).__init__()
-        loadUi("ui/page5_folder.ui",self)
+        loadUi("src/ui/ui/page5_folder.ui",self)
         self.widget = widget
-        self.label_4.setPixmap(QPixmap('logo/wallpaper1.jpg'))
+        self.label_4.setPixmap(QPixmap('src/ui/logo/wallpaper1.jpg'))
 
         if not flag:
             self.output_folder = input_folder[:len(input_folder) - 1 - input_folder[::-1].index('/')+1]+"detected_"+input_folder[len(input_folder) - 1 - input_folder[::-1].index('/')+1:input_folder.find(".")]
