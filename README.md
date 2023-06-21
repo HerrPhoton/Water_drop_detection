@@ -1,6 +1,6 @@
 # Water drop detection
 
-<img src = "https://img.shields.io/badge/Python-00D5D1?style=for-the-badge&logo=python&logoColor=FFFFFF"">
+<img src = "https://img.shields.io/badge/Python-006C6B?style=for-the-badge&logo=python&logoColor=FFFFFF">
 
 ---
 
