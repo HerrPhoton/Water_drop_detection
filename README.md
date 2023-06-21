@@ -1,8 +1,13 @@
 # Water drop detection
 
-<img src = "https://img.shields.io/badge/Python 3.9-006C6B?style=for-the-badge&logo=python&logoColor=FFFFFF">
 
-        
+<img src = "https://img.shields.io/badge/Python 3.9-006C6B?style=for-the-badge&logo=python&logoColor=FFFFFF"> <img src = 'https://img.shields.io/pypi/pyversions/:packageName?style=for-the-badge&color=3C7270&labelColor=%23006C6B&logo=pypi&logoColor=FFFFFF'>
+<img src ='https://img.shields.io/github/watchers/HerrPhoton/Water_drop_detection?style=for-the-badge&color=3C7270&labelColor=%23006C6B&logo=actigraph&logoColor=FFFFFF'>
+<img src = 'https://img.shields.io/github/actions/workflow/status/HerrPhoton/Water_drop_detection/:workflow?style=for-the-badge&color=3C7270&labelColor=%23006C6B&logo=githubactions&logoColor=FFFFFF'>
+<img src ='https://img.shields.io/github/repo-size/HerrPhoton/Water_drop_detection?style=for-the-badge&color=3C7270&labelColor=%23006C6B&logo=weightsandbiases&logoColor=FFFFFF'>
+
+        https://img.shields.io/pypi/pyversions/:packageName
+
 ---
 
 ![](https://github.com/HerrPhoton/Water_drop_detection/blob/Documentation/images/logo(2).jpg)
