@@ -1,6 +1,7 @@
 import math
 import time
 import os
+from typing import List
 
 from tqdm import tqdm
 import pandas as pd
@@ -10,13 +11,13 @@ import cv2
 from . import SaveLoadModel
 from . import BatchManager
 
-def get_circle(arr):
+def get_circle(arr: List):
     """
     Searches related areas and returns a list of dictionaries:
     
     Parameters
     ----------
-    arr: image
+    arr: Predicted mask
 
     Returns
     ----------
@@ -34,6 +35,9 @@ def get_circle(arr):
     r : float
         Radius of the circle whose area is equal to the found area
     """
+
+    if len(arr) == 0:
+        raise ValueError
 
     inner = np.copy(arr)
     inner[inner != 1] = 0
@@ -54,7 +58,7 @@ def get_circle(arr):
 
     return result
 
-def work(INPUTDIR, OUTPUTDIR, img_mask = ".png", mode = 'folder'):
+def work(INPUTDIR: str, OUTPUTDIR: str, img_mask: str = ".png", mode: str = 'folder'):
     """
     Runs a neural network on new data:
 

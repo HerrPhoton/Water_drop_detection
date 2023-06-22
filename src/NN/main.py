@@ -15,16 +15,16 @@ keras.backend.set_image_data_format('channels_last')
 
 
 def main():
-    BACKBONE   = 'resnet50'
-    BATCH_DIR  = "./src/NN/batch/"
-    MODEL_DIR  = "./src/NN/model/"
+    BACKBONE = 'resnet50'
+    BATCH_DIR = "./src/NN/batch/"
+    MODEL_DIR = "./src/NN/model/"
     MODEL_NAME = "Model"
     BATCH_SIZE = 15
-    LR         = 3E-5
-    EPOCHS     = 450
-    VERBOSE    = 1
-    NEW_MODEL  = False
-    NAMES      = []
+    LR = 3E-5
+    EPOCHS = 450
+    VERBOSE = 1
+    NEW_MODEL = False
+    NAMES = []
 
     preprocess_input = sm.get_preprocessing(BACKBONE)
 
@@ -42,7 +42,7 @@ def main():
         List of batch paths
         """
 
-        return [batch_name + "/" + x for x in BatchManager.Files_in_dir(os.path.join(BATCH_DIR, batch_name))]
+        return [os.path.join(batch_name, x) for x in BatchManager.Files_in_dir(os.path.join(BATCH_DIR, batch_name))]
     
     NAMES += List_batch_names("orig")
 
