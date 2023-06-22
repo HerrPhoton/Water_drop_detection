@@ -1,5 +1,7 @@
 name: Python package
 
+# Этот блок отвечает за то, что при каждом push и pull-request
+# на ветку master запускается тестирование 
 on: 
   push:
     branches:
@@ -7,7 +9,9 @@ on:
   pull_request:
      branches:
       - master
-
+# Это блоки работы, то есть здесь мы можем хоть как назвать блко( например, тут это
+# build-windows) и выбирать виртуальную машину для прогона ( в моем случае это windows-latest)
+# а дальше по шагам прогоняем все, что нам необходимо
 jobs:
   build-windows:
 
@@ -17,7 +21,7 @@ jobs:
         python-version: ["3.9"]
 
     steps:
-      - name: Check out source repository
+      - name: Check out source repository # Название шага, который будет отображаться при прогоне
         uses: actions/checkout@v3
       - name: Setup Python # Set Python version
         uses: actions/setup-python@v4
@@ -29,7 +33,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install pytest
           pip install -r requirements.txt
-      - name: Test with pytest
+      - name: Test with pytest # По идеи, здесь мы можем проверят правильность кода, то есть статистический анализ
         run: pytest tests.py --doctest-modules --junitxml=junit/test-results-${{ matrix.python-version }}.xml
       - name: Upload pytest test results
         uses: actions/upload-artifact@v3
@@ -38,6 +42,6 @@ jobs:
           path: junit/test-results-${{ matrix.python-version }}.xml
         # Use always() to always run this step to publish test results when there are test failures
         if: ${{ always() }}
-     # - name: Run Test's
+     # - name: Run Test's Здесь мы будем прогонять наши тесты, которые мы ждем от Санечки
       #  run: |
-          # python src/test/test_maintainer.py
+          # python src/test...... ну тут путь к файлу с тестами
