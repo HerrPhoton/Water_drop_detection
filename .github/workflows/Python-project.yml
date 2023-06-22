@@ -41,7 +41,7 @@ jobs:
 #           pyinstaller --add-data "netflix_titles.csv;." simple1.py
       - name: Run tests
         run: |
-          pytests --cov=tests
+          pytests --cov=.
 #       - name: Run test_SaveBatch
 #         run: |
 #           pytest tests/test_SaveBatch.py
@@ -54,8 +54,8 @@ jobs:
 
 
       #  Compares two code coverage files and generates report as a comment
-      - name: Get Cover 
-        uses: orgoro/coverage@v3.1
-        with:
-          coverageFile: path/to/coverage.xml
-          token: ${{ secrets.GITHUB_TOKEN }}
+#       - name: Get Cover 
+#         uses: orgoro/coverage@v3.1
+#         with:
+#           coverageFile: path/to/coverage.xml
+#           token: ${{ secrets.GITHUB_TOKEN }}
