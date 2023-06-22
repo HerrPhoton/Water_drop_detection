@@ -173,7 +173,7 @@ class FolderPretrainScreen(QMainWindow):
     def findDrops(self, file):
         """Function for switching to the detection slide."""
 
-        select_file = FolderResultScreen(file, self.widget) 
+        select_file = FolderResultScreen(file, 1, self.widget) 
         self.widget.addWidget(select_file)
         self.widget.setCurrentIndex(self.widget.currentIndex() + 1)
         
