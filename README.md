@@ -6,6 +6,7 @@
 <img src = 'https://img.shields.io/github/actions/workflow/status/HerrPhoton/Water_drop_detection/:workflow?style=for-the-badge&color=3C7270&labelColor=%23006C6B&logo=githubactions&logoColor=FFFFFF'>
 <img src = 'https://img.shields.io/github/contributors/HerrPhoton/Water_drop_detection?style=for-the-badge&color=3C7270&labelColor=%23006C6B&logo=teamspeak&logoColor=FFFFFF'>
 <img src ='https://img.shields.io/github/repo-size/HerrPhoton/Water_drop_detection?style=for-the-badge&color=3C7270&labelColor=%23006C6B&logo=weightsandbiases&logoColor=FFFFFF'>
+<img src = "https://img.shields.io/badge/Code%20Coverage-Example%25-success?style=for-the-badge&color=3C7270&labelColor=%23006C6B&logo=textpattern&logoColor=FFFFFF">
 
 
 ---
@@ -69,7 +70,19 @@ UI сделан с помощью языка Python, библиотеки PyQT5 
 
 ## Управление проектом
 
+Запуск приложения осуществяется через запуск файла main.py в папке src.
+
 ---
+
+## Результаты работы программы
+
+---
+
+| Тестовое изображение            | Маска изображения                | Маска + bounding box + окружность |
+| :---                            |    :----:                        |                              ---: |
+| <img src="https://github.com/HerrPhoton/Water_drop_detection/blob/Documentation/images/test1-1.jpg"  alt="1" width = 360px height = 400px > | <img src="https://github.com/HerrPhoton/Water_drop_detection/blob/Documentation/images/test1-2.png"  alt="1" width = 360px height = 400px > | <img src="https://github.com/HerrPhoton/Water_drop_detection/blob/Documentation/images/test1-3.png"  alt="1" width = 360px height = 400px > |
+| <img src="https://github.com/HerrPhoton/Water_drop_detection/blob/Documentation/images/test2-1.jpg"  alt="1" width = 360px height = 400px > | <img src="https://github.com/HerrPhoton/Water_drop_detection/blob/Documentation/images/test2-2.png"  alt="1" width = 360px height = 400px > | <img src="https://github.com/HerrPhoton/Water_drop_detection/blob/Documentation/images/test2-3.png"  alt="1" width = 360px height = 400px > |
+| <img src="https://github.com/HerrPhoton/Water_drop_detection/blob/Documentation/images/test3-1.jpg"  alt="1" width = 360px height = 400px >  | <img src="https://github.com/HerrPhoton/Water_drop_detection/blob/Documentation/images/test3-2.png"  alt="1" width = 360px height = 400px > | <img src="https://github.com/HerrPhoton/Water_drop_detection/blob/Documentation/images/test3-3.png"  alt="1" width = 360px height = 400px > |
 
 ## Источники
 
