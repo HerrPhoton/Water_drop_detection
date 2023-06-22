@@ -74,6 +74,16 @@ UI сделан с помощью языка Python, библиотеки PyQT5 
 
 ---
 
+---
+
+## Результаты работы программы
+
+| Тестовое изображение            | Маска изображения                | Маска + bounding box + окружность |
+| :---                            |    :----:                        |                              ---: |
+| <img src="https://github.com/HerrPhoton/Water_drop_detection/blob/Documentation/images/test1-1.jpg"  alt="1" width = 360px height = 400px > | <img src="https://github.com/HerrPhoton/Water_drop_detection/blob/Documentation/images/test1-2.png"  alt="1" width = 360px height = 400px > | <img src="https://github.com/HerrPhoton/Water_drop_detection/blob/Documentation/images/test1-3.png"  alt="1" width = 360px height = 400px > |
+| <img src="https://github.com/HerrPhoton/Water_drop_detection/blob/Documentation/images/test2-1.jpg"  alt="1" width = 360px height = 400px > | <img src="https://github.com/HerrPhoton/Water_drop_detection/blob/Documentation/images/test2-2.png"  alt="1" width = 360px height = 400px > | <img src="https://github.com/HerrPhoton/Water_drop_detection/blob/Documentation/images/test2-3.png"  alt="1" width = 360px height = 400px > |
+| <img src="https://github.com/HerrPhoton/Water_drop_detection/blob/Documentation/images/test3-1.jpg"  alt="1" width = 360px height = 400px >  | <img src="https://github.com/HerrPhoton/Water_drop_detection/blob/Documentation/images/test3-2.png"  alt="1" width = 360px height = 400px > | <img src="https://github.com/HerrPhoton/Water_drop_detection/blob/Documentation/images/test3-3.png"  alt="1" width = 360px height = 400px > |
+
 ## Источники
 
 ---
