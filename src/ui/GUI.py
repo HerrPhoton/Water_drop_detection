@@ -126,7 +126,7 @@ class ImagePretrainScreen(QMainWindow):
         self.file = file
         self.widget = widget
         self.pixmap = QPixmap(file)
-        self.label_2.setPixmap(QPixmap('src/logo/wallpaper1.jpg'))
+        self.label_2.setPixmap(QPixmap('src/ui/logo/wallpaper1.jpg'))
 
         super().layout().activate()
         self.label.setPixmap(self.pixmap.scaled(1700, 717, QtCore.Qt.KeepAspectRatio))
