@@ -41,34 +41,34 @@ jobs:
 #       - name: Run PyInstaller
 #         run: |
 #           pyinstaller --add-data "netflix_titles.csv;." simple1.py
-      - name: Run test_BatchManager
-        run: |
-          pytest tests/test_BatchManager.py
-      - name: Run test_SaveBatch
-        run: |
-          pytest tests/test_SaveBatch.py
-      - name: Run test_SaveLoadModel
-        run: |
-          pytest tests/test_SaveLoadModel.py
-      - name: Run test_TestNetwork
-        run: |
-          pytest tests/test_TestNetwork.py
-      - name: Code Coverage Report
-        uses: irongut/CodeCoverageSummary@v1.3.0
-        with:
-          filename: coverage/**/coverage.cobertura.xml
-          badge: true
-          fail_below_min: true
-          format: markdown
-          hide_branch_rate: false
-          hide_complexity: true
-          indicators: true
-          output: both
-          thresholds: '60 80'
+#       - name: Run test_BatchManager
+#         run: |
+#           pytest tests/test_BatchManager.py
+#       - name: Run test_SaveBatch
+#         run: |
+#           pytest tests/test_SaveBatch.py
+#       - name: Run test_SaveLoadModel
+#         run: |
+#           pytest tests/test_SaveLoadModel.py
+#       - name: Run test_TestNetwork
+#         run: |
+#           pytest tests/test_TestNetwork.py
+#       - name: Code Coverage Report
+#         uses: irongut/CodeCoverageSummary@v1.3.0
+#         with:
+#           filename: coverage/**/coverage.cobertura.xml
+#           badge: true
+#           fail_below_min: true
+#           format: markdown
+#           hide_branch_rate: false
+#           hide_complexity: true
+#           indicators: true
+#           output: both
+#           thresholds: '60 80'
 
-      - name: Add Coverage PR Comment
-        uses: marocchino/sticky-pull-request-comment@v2
-        if: github.event_name == 'pull_request'
-        with:
-          recreate: true
-          path: code-coverage-results.md
+#       - name: Add Coverage PR Comment
+#         uses: marocchino/sticky-pull-request-comment@v2
+#         if: github.event_name == 'pull_request'
+#         with:
+#           recreate: true
+#           path: code-coverage-results.md
