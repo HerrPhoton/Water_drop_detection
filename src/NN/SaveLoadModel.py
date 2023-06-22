@@ -1,4 +1,6 @@
 import os
+os.environ["SM_FRAMEWORK"] = "tf.keras"
+
 from keras.models import model_from_json
 
 def SaveModel(model, path: str, name: str):

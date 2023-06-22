@@ -1,5 +1,6 @@
 import random
 import os
+os.environ["SM_FRAMEWORK"] = "tf.keras"
 
 import segmentation_models as sm
 import tensorflow as tf
