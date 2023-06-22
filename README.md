@@ -6,7 +6,7 @@
 <img src = 'https://img.shields.io/github/actions/workflow/status/HerrPhoton/Water_drop_detection/:workflow?style=for-the-badge&color=3C7270&labelColor=%23006C6B&logo=githubactions&logoColor=FFFFFF'>
 <img src = 'https://img.shields.io/github/contributors/HerrPhoton/Water_drop_detection?style=for-the-badge&color=3C7270&labelColor=%23006C6B&logo=teamspeak&logoColor=FFFFFF'>
 <img src ='https://img.shields.io/github/repo-size/HerrPhoton/Water_drop_detection?style=for-the-badge&color=3C7270&labelColor=%23006C6B&logo=weightsandbiases&logoColor=FFFFFF'>
-<img src = "https://img.shields.io/badge/Code%20Coverage-Example%25-success?style=for-the-badge&color=3C7270&labelColor=%23006C6B&logo=textpattern&logoColor=FFFFFF">
+<img src = "https://img.shields.io/badge/Code%20Coverage-81%25-success?style=for-the-badge&color=3C7270&labelColor=%23006C6B&logo=textpattern&logoColor=FFFFFF">
 
 
 ---
