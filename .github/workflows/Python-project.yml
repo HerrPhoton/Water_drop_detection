@@ -43,16 +43,16 @@ jobs:
 #           pyinstaller --add-data "netflix_titles.csv;." simple1.py
       - name: Run test_BatchManager
         run: |
-          python tests/test_BatchManager.py
+          pytest tests/test_BatchManager.py
       - name: Run test_SaveBatch
         run: |
-          python tests/test_SaveBatch.py
+          pytest tests/test_SaveBatch.py
       - name: Run test_SaveLoadModel
         run: |
-          python tests/test_SaveLoadModel.py
+          pytest tests/test_SaveLoadModel.py
       - name: Run test_TestNetwork
         run: |
-          python tests/test_TestNetwork.py
+          pytest tests/test_TestNetwork.py
       - name: Code Coverage Report
         uses: irongut/CodeCoverageSummary@v1.3.0
         with:
