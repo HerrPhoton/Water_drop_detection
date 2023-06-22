@@ -23,9 +23,9 @@ def test_error_natural_sorting():
 
 ##################################### Testing Files_in_dir #####################################
 @pytest.mark.parametrize("dir, mask, res",
-                         [("imgs", "", ["img0000.jpg", "img0001.jpg", "img0002.jpg"]),
-                          ("imgs", "img", ["img0000.jpg", "img0001.jpg", "img0002.jpg"]),
-                          ("imgs", "png", [])])
+                         [("tests/imgs", "", ["img0000.jpg", "img0001.jpg", "img0002.jpg"]),
+                          ("tests/imgs", "img", ["img0000.jpg", "img0001.jpg", "img0002.jpg"]),
+                          ("tests/imgs", "png", [])])
 def test_Files_in_dir(dir, mask, res):
     assert Files_in_dir(dir, mask) == res
 
@@ -39,11 +39,11 @@ def test_error_Files_in_dir():
                          [(["img0000.jpg", "img0001.jpg", "img0002.jpg"], 3),
                           ([], 0)])
 def test_Open_Images(lst, cnt):
-    assert len(Open_Images('imgs', lst)) == cnt
+    assert len(Open_Images('tests/imgs', lst)) == cnt
 
 @pytest.mark.parametrize("path, names, error",
                          [('error', [], FileNotFoundError),
-                          ('imgs', ["img0000.jpg", 4], TypeError)])
+                          ('tests/imgs', ["img0000.jpg", 4], TypeError)])
 def test_error_Open_Images(path, names, error):
 
     with pytest.raises(error):
@@ -97,7 +97,7 @@ def test_LoadMultipleBatches():
     os.remove('2.npz')
 
 @pytest.mark.parametrize("path, name, error",
-                         [('imgs', ["1.npz", "2.npz"], FileNotFoundError),
+                         [('tests/imgs', ["1.npz", "2.npz"], FileNotFoundError),
                           ('error', ["1.npz", "2.npz"], FileNotFoundError),
                           ('.', 1, TypeError)])
 def test_error_LoadMultipleBatches(path, name, error):
