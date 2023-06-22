@@ -1,4 +1,6 @@
 import os
+os.environ["SM_FRAMEWORK"] = "tf.keras"
+
 import re
 from typing import List
 

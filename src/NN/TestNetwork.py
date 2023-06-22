@@ -6,6 +6,9 @@ from typing import List
 from tqdm import tqdm
 import pandas as pd
 import numpy as np
+import os
+os.environ["SM_FRAMEWORK"] = "tf.keras"
+
 import cv2
 
 from . import SaveLoadModel
