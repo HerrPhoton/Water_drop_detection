@@ -9,7 +9,7 @@ from src.NN.SaveBatch import *
 ##################################### Testing DropDataset #####################################
 def test_DropDataset():
 
-    dataset = DropDataset('dataset', '.jpg', '.npy')
+    dataset = DropDataset('tests/dataset', '.jpg', '.npy')
 
     assert len(dataset) == 4 and len(dataset.__getitem__(0)) == 2
 
@@ -25,7 +25,7 @@ def test_error_DropDataset(dir, img_suf, mask_suf, error):
 
 ##################################### Testing SaveToFile #####################################
 def test_SaveToFile():
-    dataset = DropDataset('dataset', '.jpg', '.npy')
+    dataset = DropDataset('tests/dataset', '.jpg', '.npy')
     SaveToFile(dataset, '.', 'dataset')
 
     assert os.path.isfile('dataset.npz')
