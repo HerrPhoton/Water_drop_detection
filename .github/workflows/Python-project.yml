@@ -1,7 +1,6 @@
 name: Python package
 
-# Этот блок отвечает за то, что при каждом push и pull-request
-# на ветку master запускается тестирование 
+
 on: 
   push:
     branches:
@@ -9,9 +8,7 @@ on:
   pull_request:
      branches:
       - master
-# Это блоки работы, то есть здесь мы можем хоть как назвать блко( например, тут это
-# build-windows) и выбирать виртуальную машину для прогона ( в моем случае это windows-latest)
-# а дальше по шагам прогоняем все, что нам необходимо
+
 jobs:
   build-windows:
 
