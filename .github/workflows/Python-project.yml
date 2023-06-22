@@ -41,9 +41,9 @@ jobs:
 #       - name: Run PyInstaller
 #         run: |
 #           pyinstaller --add-data "netflix_titles.csv;." simple1.py
-#       - name: Run test_BatchManager
-#         run: |
-#           pytest tests/test_BatchManager.py
+      - name: Run tests
+        run: |
+          pytest tests
 #       - name: Run test_SaveBatch
 #         run: |
 #           pytest tests/test_SaveBatch.py
