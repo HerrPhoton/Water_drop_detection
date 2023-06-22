@@ -1,7 +1,7 @@
 import os
 from keras.models import model_from_json
 
-def SaveModel(model, path, name):
+def SaveModel(model, path: str, name: str):
     """
     Saves model and weights:
 
@@ -23,7 +23,7 @@ def SaveModel(model, path, name):
 
     model.save_weights(os.path.join(path, name + ".h5"))
 
-def LoadModel(path, name, weights = None):
+def LoadModel(path, name: str, weights = None):
     """
     Load model and weights:
 
@@ -46,10 +46,14 @@ def LoadModel(path, name, weights = None):
     if weights is None:
         weights = name
 
-    with open(os.path.join(path, name + ".json"), "r") as json_file:
-        loaded_model_json = json_file.read()
-        model = model_from_json(loaded_model_json)
+    try:
+        with open(os.path.join(path, name + ".json"), "r") as json_file:
+            loaded_model_json = json_file.read()
+            model = model_from_json(loaded_model_json)
 
-    model.load_weights(os.path.join(path, weights + ".h5"))
+        model.load_weights(os.path.join(path, weights + ".h5"))
+
+    except FileNotFoundError:
+        raise
 
     return model

@@ -1,15 +1,20 @@
 import os
+import sys
+from typing import List
+
+from os.path import dirname, join, abspath
+sys.path.insert(0, abspath(join(dirname(__file__), '..')))
 
 import matplotlib.pyplot as plt
 import numpy as np
 import cv2
 
-import BatchManager
+import src.NN.BatchManager as BatchManager
 
 
 class DropDataset():
 
-    def __init__(self, folder, data_postfix, mask_postfix, transform = None):
+    def __init__(self, folder: str, data_postfix: str, mask_postfix: str, transform = None):
         """
         Shows 10 images:
 
@@ -27,12 +32,22 @@ class DropDataset():
         transform: Transformations applied to the input image
         """
 
+        if not os.path.isdir(folder):
+            raise FileNotFoundError
+             
         images = sorted([os.path.join(folder, name) for name
                          in os.listdir(folder) if name.endswith(data_postfix)])
 
         masks = sorted([os.path.join(folder, name) for name
                         in os.listdir(folder) if name.endswith(mask_postfix)])
         
+        if len(images) == 0 or len(masks) == 0:
+            raise FileNotFoundError
+        
+        if len(images) != len(masks):
+            raise Exception("The number of images and masks does not match")
+        
+
         self.pairs = list(zip(images, masks))
 
     def __len__(self):
@@ -63,7 +78,7 @@ class DropDataset():
 
         return img, mask
 
-def visualize_samples(dataset, indices, title = None, count = 10):
+def visualize_samples(dataset: DropDataset, indices: List[int], title: str = None, count: int = 10):
     """
     Shows 10 images:
 
@@ -103,7 +118,7 @@ def visualize_samples(dataset, indices, title = None, count = 10):
 
 IMG_SIZE = 32 * 8
 
-def SaveToFile(dataset, resultDir, name):
+def SaveToFile(dataset: DropDataset, resultDir: str, name: str):
     """
     Changes the size, convert the mask to binary and save
 
@@ -117,13 +132,14 @@ def SaveToFile(dataset, resultDir, name):
     name : str
         Image Name
     """
+
     im_array = []
     mask_array = []
 
     for im, mask in dataset:
         im = cv2.resize(im, dsize = (IMG_SIZE, IMG_SIZE), interpolation = cv2.INTER_LINEAR)
         mask = mask.astype("uint8")
-        mask = cv2.resize(mask, dsize=(IMG_SIZE, IMG_SIZE), interpolation = cv2.INTER_NEAREST)
+        mask = cv2.resize(mask, dsize = (IMG_SIZE, IMG_SIZE), interpolation = cv2.INTER_NEAREST)
         mask_hot_one = np.empty((IMG_SIZE, IMG_SIZE, 2))
         mask_hot_one[mask == 0] = [1, 0]
         mask_hot_one[mask == 1] = [0, 1]

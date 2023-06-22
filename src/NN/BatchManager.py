@@ -1,12 +1,13 @@
 import os
 import re
+from typing import List
 
 from tqdm import tqdm
 import numpy as np
 import cv2
 
 
-def natural_sorting(arr):
+def natural_sorting(arr: List[str]):
     """
     Sorts according to the order of the numbers
 
@@ -20,11 +21,11 @@ def natural_sorting(arr):
     """
 
     convert = lambda text: int(text) if text.isdigit() else float('inf')
-    arr.sort(key = lambda var: [[convert(x), x] for x in re.findall(r'-?[0-9]+|.', var)])
+    arr.sort(key = lambda var: [[convert(x), x] for x in re.findall(r'-[0-9]+|.', var)])
 
     return arr
 
-def Files_in_dir(dir_path, mask = ""):
+def Files_in_dir(dir_path: str, mask: str = ""):
     """
     Returns a list of names of all files in alphabetical order containing mask in the name
 
@@ -41,9 +42,12 @@ def Files_in_dir(dir_path, mask = ""):
     List of names
     """
 
+    if not os.path.isdir(dir_path):
+        raise FileNotFoundError
+
     return list(filter(lambda x: re.search(mask, x) is not None, natural_sorting(os.listdir(dir_path))))
 
-def Open_Images(path, names):
+def Open_Images(path: str, names: List[str]):
     """
     Opens a list of images
 
@@ -60,21 +64,20 @@ def Open_Images(path, names):
     Image list
     """
 
+    if not os.path.isdir(path):
+        raise FileNotFoundError
+
     result = []
 
     for name in names:
-        try:
-            img = cv2.imread(os.path.join(path, name), cv2.IMREAD_COLOR)
+        img = cv2.imread(os.path.join(path, name), cv2.IMREAD_COLOR)
 
-            if img is not None:
-                result.append(img)
-
-        except OSError as e:
-            print("OSError. Bad img most likely", e, os.path.join(path, name))
+        if img is not None:
+            result.append(img)
 
     return result
 
-def SaveBatch(x, y, path, name):
+def SaveBatch(x: np.ndarray, y: np.ndarray, path: str, name: List[str]):
     """
     Stores two numpy arrays
 
@@ -91,9 +94,12 @@ def SaveBatch(x, y, path, name):
         File name, for example, 1.npz
     """
 
-    np.savez_compressed(os.path.join(path, name), x=x, y=y)
+    if not os.path.isdir(path):
+        raise FileNotFoundError
 
-def LoadBatch(path, name):
+    np.savez_compressed(os.path.join(path, name), x = x, y = y)
+
+def LoadBatch(path: str, name: str):
     """
     Loads two numpy arrays saved by the SaveBatch function
 
@@ -109,12 +115,18 @@ def LoadBatch(path, name):
     ----------
     Two numpy arrays: image and target
     """
+  
+    if not os.path.isdir(path):
+        raise FileNotFoundError
+    
+    if not os.path.isfile(os.path.join(path, name)):
+        raise FileNotFoundError 
 
     data = np.load(os.path.join(path, name))
 
     return data['x'], data['y']
 
-def LoadMultipleBatches(path, names):
+def LoadMultipleBatches(path: str, names: List[str]):
     """
     Loads 2 * len(names) numpy arrays saved by the SaveBatch function
 
@@ -128,8 +140,11 @@ def LoadMultipleBatches(path, names):
 
     Returns
     ----------
-    Two numpy arrays image and target
+    Two numpy arrays images and targets
     """
+
+    if not os.path.isdir(path):
+        raise FileNotFoundError
 
     size    = 0
     shape_x = None
