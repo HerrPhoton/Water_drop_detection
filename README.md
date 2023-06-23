@@ -112,6 +112,10 @@ docker build . -t drop_detection
 docker run drop_detection
 ```
 + Образ можно скачать с Docker Hub по ссылке: https://hub.docker.com/repository/docker/alincnl/drop_detection
+
+Информация о покрытии тестами:
+https://app.codecov.io/gh/HerrPhoton/Water_drop_detection
+
 ---
 
 ## Результаты работы программы
