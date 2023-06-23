@@ -14,7 +14,7 @@ RUN  apt-get update && apt-get -y install xserver-xorg &&\
     apt install -y libxkbcommon-x11-0 &&\
     apt-get install -y libxcb*
 
-COPY Water_drop_detection ./Water_drop_detection
+COPY water_drop_detection ./water_drop_detection
 COPY tests ./tests
 
 RUN echo "Unit-tests run"
@@ -22,4 +22,4 @@ RUN pytest tests
 RUN echo "Unit-tests run completed"
 
 RUN echo "Application run"
-CMD ["python", "Water_drop_detection/main.py"]
+CMD ["python", "water_drop_detection/main.py"]
