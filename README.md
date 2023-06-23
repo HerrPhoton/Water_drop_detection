@@ -76,11 +76,11 @@ UI сделан с помощью языка Python, библиотеки PyQT5 
 ```
 git clone https://github.com/HerrPhoton/Water_drop_detection
 ```
-+ Установите необходимые библиотеки командой ниже:
++ Откройте папку Water_drop_detection и установите необходимые библиотеки командой ниже:
 ```
 pip -r install requirements.txt
 ```
-+ Откройте папку Water_drop_detection и запустите приложение с помощью команды:
++ Запустите приложение с помощью команды:
   
 ```
 python water_drop_detection/main.py
