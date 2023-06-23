@@ -70,6 +70,7 @@ UI сделан с помощью языка Python, библиотеки PyQT5 
 ## Управление проектом
 
 Запуск приложения осуществяется через запуск файла main.py в папке src.
+
 Образ можно скачать с Docker Hub по ссылке: https://hub.docker.com/repository/docker/alincnl/drop_detection
 
 ---
