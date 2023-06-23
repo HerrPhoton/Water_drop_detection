@@ -33,7 +33,7 @@
 
 ---
 
-![](https://github.com/HerrPhoton/Water_drop_detection/blob/Documentation/images/unet.jpg)
+![](https://github.com/HerrPhoton//blob/Documentation/images/unet.jpg)
 
 ---
 
@@ -77,12 +77,12 @@ pip install water-drop-detection
 ```
 + Для запуска проекта через py файл:
 ```
-from water-drop-detection import main
+from water_drop_detection import main
 main.main()
 ```
 + Или при клонировании репозитория можно вызвать:
 ```
-python Water_drop_detection/main.py
+python water_drop_detection/main.py
 ```
 
 Для разработчика:
