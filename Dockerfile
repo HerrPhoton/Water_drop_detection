@@ -16,7 +16,6 @@ RUN  apt-get update && apt-get -y install xserver-xorg &&\
 
 COPY Water_drop_detection ./Water_drop_detection
 COPY tests ./tests
-COPY main.py .
 
 RUN echo "Unit-tests run"
 RUN pytest tests
