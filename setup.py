@@ -7,7 +7,7 @@ with open("requirements.txt", "r") as file:
     requirements = file.read().splitlines()
 
 setuptools.setup(
-    name = "water-drops-detection",
+    name = "water_drops_detection",
     version = "0.1",
     author = "Aleksandr Leisle, Sofia Volodina, Alina Shitenko",
     author_email = "a.leisle@g.nsu.ru, s.volodina@g.nsu.ru, a.shitenko@g.nsu.ru",
@@ -15,8 +15,9 @@ setuptools.setup(
     long_description = read_me,
     long_description_content_type = "text/markdown",
     project_urls = {
-        'Homepage': 'https://github.com/HerrPhoton/Water_drop_detection',
+        'Documentation': 'https://github.com/HerrPhoton/Water_drop_detection/blob/master/Documentation.pdf',
         'Bug Tracker': 'https://github.com/HerrPhoton/Water_drop_detection/issues',
+        'Homepage': 'https://github.com/HerrPhoton/Water_drop_detection',
     },
     packages = setuptools.find_packages(),
     install_requires = requirements,
