@@ -11,7 +11,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import cv2
 
-import Water_drop_detection.NN.BatchManager as BatchManager
+import water_drop_detection.NN.BatchManager as BatchManager
 
 
 class DropDataset():

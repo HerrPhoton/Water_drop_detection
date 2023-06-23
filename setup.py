@@ -19,7 +19,7 @@ setuptools.setup(
         'Bug Tracker': 'https://github.com/HerrPhoton/Water_drop_detection/issues',
         'Homepage': 'https://github.com/HerrPhoton/Water_drop_detection',
     },
-    packages = ['Water_drop_detection'],
+    packages = ['water_drop_detection'],
     install_requires = requirements,
     classifiers = [
         "Programming Language :: Python :: 3.9",

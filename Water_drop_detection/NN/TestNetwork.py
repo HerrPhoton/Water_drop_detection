@@ -84,10 +84,10 @@ def work(INPUTDIR: str, OUTPUTDIR: str, img_mask: str = ".png", mode: str = 'fol
     """
 
     if INPUTDIR is None:
-        INPUTDIR = "./Water_drop_detection/NN/data/"
+        INPUTDIR = "./water_drop_detection/NN/data/"
 
     if OUTPUTDIR is None:
-        OUTPUTDIR = "./Water_drop_detection/NN/output"
+        OUTPUTDIR = "./water_drop_detection/NN/output"
 
     os.makedirs(OUTPUTDIR, exist_ok = True)
 
@@ -101,7 +101,7 @@ def work(INPUTDIR: str, OUTPUTDIR: str, img_mask: str = ".png", mode: str = 'fol
     img_n = len(original)
     x_train = np.stack(list(map(lambda x: cv2.resize(x, dsize = (IMG_SIZE, IMG_SIZE), interpolation = cv2.INTER_LINEAR), original)))
 
-    model = SaveLoadModel.LoadModel("Water_drop_detection/NN/model", "Model")
+    model = SaveLoadModel.LoadModel("water_drop_detection/NN/model", "Model")
 
     start_time = time.time()
     predict = model.predict(x_train)

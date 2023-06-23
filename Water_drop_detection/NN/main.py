@@ -17,8 +17,8 @@ keras.backend.set_image_data_format('channels_last')
 
 def main():
     BACKBONE = 'resnet50'
-    BATCH_DIR = "./Water_drop_detection/NN/batch/"
-    MODEL_DIR = "./Water_drop_detection/NN/model/"
+    BATCH_DIR = "./water_drop_detection/NN/batch/"
+    MODEL_DIR = "./water_drop_detection/NN/model/"
     MODEL_NAME = "Model"
     BATCH_SIZE = 15
     LR = 3E-5
