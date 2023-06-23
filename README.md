@@ -91,12 +91,18 @@ pip -r install requirements.txt
 ```
 python main.py
 ```
-+ Страница документации может быть запущена через 
++ Страница документации может быть запущена через:
 ```
 start docs\build\html\index.html
 ```
-Образ можно скачать с Docker Hub по ссылке: https://hub.docker.com/repository/docker/alincnl/drop_detection
 
+Работа с Docker:
++ Команды для сборки и запуска проекта в терминале:
+```
+docker build . -t drop_detection
+docker run drop_detection
+```
++ Образ можно скачать с Docker Hub по ссылке: https://hub.docker.com/repository/docker/alincnl/drop_detection
 ---
 
 ## Результаты работы программы
