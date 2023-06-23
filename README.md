@@ -69,17 +69,33 @@ UI сделан с помощью языка Python, библиотеки PyQT5 
 
 ## Управление проектом
 
-Запуск приложения осуществяется через запуск файла main.py:
+### Установка и запуск программы
+
+Для пользователя:
 ```
-python main.py
+pip install water-drops-detection
 ```
 
-Образ можно скачать с Docker Hub по ссылке: https://hub.docker.com/repository/docker/alincnl/drop_detection
-
-Либо можно склонировать репозиторий:
+Для разработчика:
++ Вы можете скачать проект по этой ссылке: https://github.com/HerrPhoton/Water_drop_detection
++ Или клонировать репозиторий нижеприведенной командой:
 ```
 git clone https://github.com/HerrPhoton/Water_drop_detection
 ```
++ Откройте проект в IDE
++ Установите необходимые библиотеки командой ниже:
+```
+pip -r install requirements.txt
+```
++ Запуск приложения осуществяется через запуск файла main.py:
+```
+python main.py
+```
++ Страница документации может быть запущена через 
+```
+start docs\build\html\index.html
+```
+Образ можно скачать с Docker Hub по ссылке: https://hub.docker.com/repository/docker/alincnl/drop_detection
 
 ---
 
