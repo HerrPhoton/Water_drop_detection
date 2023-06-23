@@ -9,7 +9,7 @@ sys.path.insert(0, abspath(join(dirname(__file__), '..')))
 import pytest
 from segmentation_models import Unet
 
-from Water_drop_detection.NN.SaveLoadModel import *
+from water_drop_detection.NN.SaveLoadModel import *
 
 ##################################### Testing SaveModel #####################################
 def test_SaveModel():
