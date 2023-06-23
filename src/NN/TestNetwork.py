@@ -134,7 +134,7 @@ def work(INPUTDIR: str, OUTPUTDIR: str, img_mask: str = ".png", mode: str = 'fol
         cv2.imwrite(os.path.join(OUTPUTDIR, str(i) + "_frame.png"), orig)
         
     df = pd.DataFrame({'Number of image' : count_img, 'Areas of drops': areas_drops})
-    df.to_csv("./src/NN/output/Areas.csv", index = False)
+    df.to_csv(os.path.join(OUTPUTDIR, "Areas.csv"), index = False)
 
 
 # if __name__ == "__main__":
