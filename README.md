@@ -8,7 +8,6 @@
 <img src ='https://img.shields.io/github/repo-size/HerrPhoton/Water_drop_detection?style=for-the-badge&color=3C7270&labelColor=%23006C6B&logo=weightsandbiases&logoColor=FFFFFF'>
 <img src = "https://img.shields.io/badge/Code%20Coverage-Example%25-success?style=for-the-badge&color=3C7270&labelColor=%23006C6B&logo=textpattern&logoColor=FFFFFF">
 <img src = "https://img.shields.io/docker/image-size/alincnl/drop_detection/detect?style=for-the-badge&color=3C7270&labelColor=%23006C6B&logo=docker&logoColor=FFFFFF">
-<img src = "https://img.shields.io/docker/automated/alincnl/drop_detection">
 
 ---
 
