@@ -4,7 +4,7 @@
 
 ---
 
-<img src = "https://img.shields.io/badge/Python 3.9.8-006C6B?style=for-the-badge&color=3C7270&labelColor=%23006C6B&logo=python&logoColor=FFFFFF"> <img src ='https://img.shields.io/github/watchers/HerrPhoton/Water_drop_detection?style=for-the-badge&color=3C7270&labelColor=%23006C6B&logo=actigraph&logoColor=FFFFFF'>
+<img src = "https://img.shields.io/badge/Python 3.9-006C6B?style=for-the-badge&color=3C7270&labelColor=%23006C6B&logo=python&logoColor=FFFFFF"> <img src ='https://img.shields.io/github/watchers/HerrPhoton/Water_drop_detection?style=for-the-badge&color=3C7270&labelColor=%23006C6B&logo=actigraph&logoColor=FFFFFF'>
 <img src = 'https://img.shields.io/github/actions/workflow/status/HerrPhoton/Water_drop_detection/Project-tests.yml?style=for-the-badge&color=3C7270&labelColor=%23006C6B&logo=githubactions&logoColor=FFFFFF'>
 <img src = 'https://img.shields.io/github/contributors/HerrPhoton/Water_drop_detection?style=for-the-badge&color=3C7270&labelColor=%23006C6B&logo=teamspeak&logoColor=FFFFFF'>  
 <img src ='https://img.shields.io/github/repo-size/HerrPhoton/Water_drop_detection?style=for-the-badge&color=3C7270&labelColor=%23006C6B&logo=weightsandbiases&logoColor=FFFFFF'>
@@ -69,18 +69,40 @@ UI сделан с помощью языка Python, библиотеки PyQT5 
 
 ## Управление проектом
 
-Запуск приложения осуществяется через запуск файла main.py:
+### Установка и запуск программы
+
+Для пользователя:
 ```
-python main.py
+pip install water-drops-detection
 ```
 
-Образ можно скачать с Docker Hub по ссылке: https://hub.docker.com/repository/docker/alincnl/drop_detection
-
-Либо можно склонировать репозиторий:
+Для разработчика:
++ Вы можете скачать проект по этой ссылке: https://github.com/HerrPhoton/Water_drop_detection
++ Или клонировать репозиторий нижеприведенной командой:
 ```
 git clone https://github.com/HerrPhoton/Water_drop_detection
 ```
++ Откройте проект в IDE
++ Установите необходимые библиотеки командой ниже:
+```
+pip -r install requirements.txt
+```
++ Запуск приложения осуществяется через запуск файла main.py:
+```
+python main.py
+```
++ Страница документации может быть запущена через:
+```
+start docs\build\html\index.html
+```
 
+Работа с Docker:
++ Команды для сборки и запуска проекта в терминале:
+```
+docker build . -t drop_detection
+docker run drop_detection
+```
++ Образ можно скачать с Docker Hub по ссылке: https://hub.docker.com/repository/docker/alincnl/drop_detection
 ---
 
 ## Результаты работы программы
