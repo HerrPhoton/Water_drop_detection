@@ -120,6 +120,6 @@ https://app.codecov.io/gh/HerrPhoton/Water_drop_detection
 ## Источники
 
 ---
-[U-Net: Convolutional Networks for Biomedical Image Segmentation](https://arxiv.org/abs/1505.04597)
-[GitHub Actions](https://docs.github.com/ru/actions)
+[U-Net: Convolutional Networks for Biomedical Image Segmentation](https://arxiv.org/abs/1505.04597)  
+[GitHub Actions](https://docs.github.com/ru/actions)  
 [Docker Documentation](https://docs.docker.com)
