@@ -19,10 +19,7 @@ COPY tests ./tests
 COPY main.py .
 
 RUN echo "Unit-tests run"
-RUN python tests/test_BatchManager.py
-RUN python tests/test_SaveBatch.py
-RUN python tests/test_SaveLoadModel.py
-RUN python tests/test_TestNetwork.py
+RUN pytest tests
 RUN echo "Unit-tests run completed"
 
 RUN echo "Application run"
