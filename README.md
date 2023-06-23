@@ -73,7 +73,6 @@ UI сделан с помощью языка Python, библиотеки PyQT5 
 
 Для пользователя:
 + Перейдите по ссылке и скачайте проект: https://github.com/HerrPhoton/Water_drop_detection/releases
-+ После установки запустите exe файл
 
 Для разработчика:
 + Вы можете скачать проект по этой ссылке: https://github.com/HerrPhoton/Water_drop_detection
