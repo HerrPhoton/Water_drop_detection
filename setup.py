@@ -8,7 +8,7 @@ with open("requirements.txt", "r") as file:
 
 setuptools.setup(
     name = "water_drop_detection",
-    version = "0.1",
+    version = "0.2",
     author = "Aleksandr Leisle, Sofia Volodina, Alina Shitenko",
     author_email = "a.leisle@g.nsu.ru, s.volodina@g.nsu.ru, a.shitenko@g.nsu.ru",
     description = "A neural network that detects water drops on the surface from an image.",
