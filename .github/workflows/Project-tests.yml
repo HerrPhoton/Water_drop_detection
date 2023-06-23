@@ -41,4 +41,8 @@ jobs:
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
           files: ./coverage.xml
+          flags: tests
+          name: codecov-placeholder-service
+          fail_ci_if_error: true
+          verbose: true
 
