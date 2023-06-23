@@ -7,7 +7,7 @@
 <img src = 'https://img.shields.io/github/contributors/HerrPhoton/Water_drop_detection?style=for-the-badge&color=3C7270&labelColor=%23006C6B&logo=teamspeak&logoColor=FFFFFF'>
 <img src ='https://img.shields.io/github/repo-size/HerrPhoton/Water_drop_detection?style=for-the-badge&color=3C7270&labelColor=%23006C6B&logo=weightsandbiases&logoColor=FFFFFF'>
 <img src = "https://img.shields.io/badge/Code%20Coverage-Example%25-success?style=for-the-badge&color=3C7270&labelColor=%23006C6B&logo=textpattern&logoColor=FFFFFF">
-[![Docker Image Size](https://badgen.net/docker/size/alincnl/drop_detection)?icon=docker&label=image%20size)][(https://hub.docker.com/repository/docker/alincnl/drop_detection/)]
+[![Docker Image Size](https://badgen.net/docker/size/alincnl/drop_detection)?icon=docker&label=image%20size)](https://hub.docker.com/repository/docker/alincnl/drop_detection/)
 
 ---
 
