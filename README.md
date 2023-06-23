@@ -72,18 +72,8 @@ UI сделан с помощью языка Python, библиотеки PyQT5 
 ### Установка и запуск программы
 
 Для пользователя:
-```
-pip install water-drop-detection
-```
-+ Для запуска проекта через py файл:
-```
-from water_drop_detection import main
-main.main()
-```
-+ Или при клонировании репозитория можно вызвать:
-```
-python water_drop_detection/main.py
-```
++ Перейдите по ссылке и скачайте проект: https://github.com/HerrPhoton/Water_drop_detection/releases
++ После установки запустите exe файл
 
 Для разработчика:
 + Вы можете скачать проект по этой ссылке: https://github.com/HerrPhoton/Water_drop_detection
