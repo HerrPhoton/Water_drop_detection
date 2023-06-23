@@ -4,7 +4,7 @@ from os.path import dirname, join, abspath
 sys.path.insert(0, abspath(join(dirname(__file__), '..')))
 
 import pytest
-from src.NN.SaveBatch import *
+from Water_drop_detection.NN.SaveBatch import *
 
 ##################################### Testing DropDataset #####################################
 def test_DropDataset():

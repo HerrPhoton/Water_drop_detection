@@ -6,7 +6,7 @@ sys.path.insert(0, abspath(join(dirname(__file__), '..')))
 import pytest
 import numpy as np
 
-from src.NN.BatchManager import *
+from Water_drop_detection.NN.BatchManager import *
 
 ##################################### Testing natural_sorting #####################################
 @pytest.mark.parametrize("lst, res",
