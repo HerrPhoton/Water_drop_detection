@@ -75,7 +75,7 @@ UI сделан с помощью языка Python, библиотеки PyQT5 
 ```
 pip install water-drop-detection
 ```
-+ Для запуска проекта через py файл
++ Для запуска проекта через py файл:
 ```
 from water-drop-detection import main
 main.main()
