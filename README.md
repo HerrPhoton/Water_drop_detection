@@ -1,5 +1,8 @@
-# Water drop detection
+# Water Drops Detection
 
+![](https://github.com/HerrPhoton/Water_drop_detection/blob/Documentation/images/logo(2).jpg)
+
+---
 
 <img src = "https://img.shields.io/badge/Python 3.9-006C6B?style=for-the-badge&logo=python&logoColor=FFFFFF"> <img src = 'https://img.shields.io/pypi/pyversions/:packageName?style=for-the-badge&color=3C7270&labelColor=%23006C6B&logo=pypi&logoColor=FFFFFF'>
 <img src ='https://img.shields.io/github/watchers/HerrPhoton/Water_drop_detection?style=for-the-badge&color=3C7270&labelColor=%23006C6B&logo=actigraph&logoColor=FFFFFF'>
@@ -7,32 +10,27 @@
 <img src = 'https://img.shields.io/github/contributors/HerrPhoton/Water_drop_detection?style=for-the-badge&color=3C7270&labelColor=%23006C6B&logo=teamspeak&logoColor=FFFFFF'>
 <img src ='https://img.shields.io/github/repo-size/HerrPhoton/Water_drop_detection?style=for-the-badge&color=3C7270&labelColor=%23006C6B&logo=weightsandbiases&logoColor=FFFFFF'>
 <img src = "https://img.shields.io/badge/Code%20Coverage-81%25-success?style=for-the-badge&color=3C7270&labelColor=%23006C6B&logo=textpattern&logoColor=FFFFFF">
+<img src = "https://img.shields.io/docker/image-size/alincnl/drop_detection/detect?style=for-the-badge&color=3C7270&labelColor=%23006C6B&logo=docker&logoColor=FFFFFF">
 
 
 ---
-
-![](https://github.com/HerrPhoton/Water_drop_detection/blob/Documentation/images/logo(2).jpg)
-
----
-
 ### Выполнили: 
 + [Володина Софья](https://github.com/PiroJOJO)
 + [Лейсле Александр](https://github.com/HerrPhoton)
 + [Шитенко Алина](https://github.com/alincnl)
 ### Дата: 25.06.2023г.
-
 ---
 
 ## Введение
 
-Проект создан для детектирования на изображении капель воды на любой поверхности. Данная задача стала интересна, так как мы хотели 
-попрактиковать свои навыки в обучении нейронных сетей, собрать свой собственный датасет и сделать нашу модель доступной для любого пользователя, который захочет проверить работу детекции на своем собственном изображении.
+Проект создан для детектирования на изображении капель воды на любой поверхности. Эта задача стала интересна, так как мы хотели 
+попрактиковать свои навыки в обучении нейронных сетей, собрать самим датасет и сделать модель доступной для любого пользователя, который захочет проверить работу детекции на своем собственном изображении.
 
 ---
 
 ## Neural Net
 
-Для детекции капель была выбрана нейросеть с архитектурой Unet, имеющая энкодер ResNet50. Она представляет из себя сверточную нейронную сеть из  двух блоков: энкодера и декодера. Первый из них уменьшает разрешение изображения и увеличивает информационный объем каждого пикселя. Декодер, наоборот, разварачивает выход из энкодера до первоначального размера и выдает маску искомого объекта.  
+Для детекции капель была выбрана нейросеть с архитектурой Unet, имеющая энкодер ResNet50. Она представляет из себя сверточную нейронную сеть из  двух блоков: энкодера и декодера. Первый из них уменьшает разрешение изображения и увеличивает информационный объем каждого пикселя. Декодер, наоборот, разворачивает выход из энкодера до первоначального размера и выдает маску искомого объекта.  
 
 ---
 
@@ -45,7 +43,7 @@
 
 ---
 
-## UI
+## Датасет
 
 Сборка датасета состояла из нескольких частей: 
 - поиск изображений в интернете/съемка фотографии с каплями воды
@@ -59,6 +57,8 @@
 
 ---
 
+## UI
+
 UI сделан с помощью языка Python, библиотеки PyQT5 и программы QtDesigner. 
 Интерфейс принимает изображение или папку с изображениями и отправляет их в нейронную сеть для детектирования. Результат сохраняется в новую папку в двух форматах: на одном капли закрашиваются, на другом добавляется bounding box. Пользователь может выбрать любую из версий для просмотра. Также при передаче изображения есть возможность отредактировать его: повернуть в любую сторону или обрезать. Каждая страница UI изначально создана в QtDesigner, в коде представлена в виде класса со своими методами. Взаимодействие между страницами происходит с помощью функций библиотеки PyQT5
 
@@ -71,6 +71,8 @@ UI сделан с помощью языка Python, библиотеки PyQT5 
 ## Управление проектом
 
 Запуск приложения осуществяется через запуск файла main.py в папке src.
+
+Образ можно скачать с Docker Hub по ссылке: https://hub.docker.com/repository/docker/alincnl/drop_detection
 
 ---
 
