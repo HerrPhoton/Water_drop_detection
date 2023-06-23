@@ -33,7 +33,7 @@
 
 ---
 
-![](https://github.com/HerrPhoton/Water_drop_detection/blob/master/images/unet.jpg))
+![](https://github.com/HerrPhoton/Water_drop_detection/blob/master/images/unet.jpg)
 
 ---
 
@@ -71,23 +71,19 @@ UI сделан с помощью языка Python, библиотеки PyQT5 
 
 ### Установка и запуск программы
 
-Для пользователя:
-+ Перейдите по ссылке и скачайте проект: https://github.com/HerrPhoton/Water_drop_detection/releases
-
-Для разработчика:
-+ Вы можете скачать проект по этой ссылке: https://github.com/HerrPhoton/Water_drop_detection
-+ Или клонировать репозиторий нижеприведенной командой:
++ Перейдите по ссылке и скачайте архив с проектом: https://github.com/HerrPhoton/Water_drop_detection/releases
++ Или клонируйте репозиторий нижеприведенной командой:
 ```
 git clone https://github.com/HerrPhoton/Water_drop_detection
 ```
-+ Откройте проект в IDE
 + Установите необходимые библиотеки командой ниже:
 ```
 pip -r install requirements.txt
 ```
-+ Запуск приложения осуществяется через запуск файла main.py:
++ Откройте папку Water_drop_detection и запустите приложение с помощью команды:
+  
 ```
-python main.py
+python water_drop_detection/main.py
 ```
 + Страница документации может быть запущена через:
 ```
