@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>src.ui.GUI module &mdash; Water Drops Detection  documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Water Drops Detection
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">src.ui.GUI module</a><ul>
+<li><a class="reference internal" href="#src.ui.GUI.EditScreen"><code class="docutils literal notranslate"><span class="pre">EditScreen</span></code></a><ul>
+<li><a class="reference internal" href="#src.ui.GUI.EditScreen.Back_button"><code class="docutils literal notranslate"><span class="pre">EditScreen.Back_button()</span></code></a></li>
+<li><a class="reference internal" href="#src.ui.GUI.EditScreen.OK_button"><code class="docutils literal notranslate"><span class="pre">EditScreen.OK_button()</span></code></a></li>
+<li><a class="reference internal" href="#src.ui.GUI.EditScreen.Rotate_button"><code class="docutils literal notranslate"><span class="pre">EditScreen.Rotate_button()</span></code></a></li>
+<li><a class="reference internal" href="#src.ui.GUI.EditScreen.mouseMoveEvent"><code class="docutils literal notranslate"><span class="pre">EditScreen.mouseMoveEvent()</span></code></a></li>
+<li><a class="reference internal" href="#src.ui.GUI.EditScreen.mousePressEvent"><code class="docutils literal notranslate"><span class="pre">EditScreen.mousePressEvent()</span></code></a></li>
+<li><a class="reference internal" href="#src.ui.GUI.EditScreen.mouseReleaseEvent"><code class="docutils literal notranslate"><span class="pre">EditScreen.mouseReleaseEvent()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#src.ui.GUI.FolderPretrainScreen"><code class="docutils literal notranslate"><span class="pre">FolderPretrainScreen</span></code></a><ul>
+<li><a class="reference internal" href="#src.ui.GUI.FolderPretrainScreen.Back"><code class="docutils literal notranslate"><span class="pre">FolderPretrainScreen.Back()</span></code></a></li>
+<li><a class="reference internal" href="#src.ui.GUI.FolderPretrainScreen.findDrops"><code class="docutils literal notranslate"><span class="pre">FolderPretrainScreen.findDrops()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#src.ui.GUI.FolderResultScreen"><code class="docutils literal notranslate"><span class="pre">FolderResultScreen</span></code></a><ul>
+<li><a class="reference internal" href="#src.ui.GUI.FolderResultScreen.changeMode"><code class="docutils literal notranslate"><span class="pre">FolderResultScreen.changeMode()</span></code></a></li>
+<li><a class="reference internal" href="#src.ui.GUI.FolderResultScreen.nextPhoto"><code class="docutils literal notranslate"><span class="pre">FolderResultScreen.nextPhoto()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#src.ui.GUI.ImagePretrainScreen"><code class="docutils literal notranslate"><span class="pre">ImagePretrainScreen</span></code></a><ul>
+<li><a class="reference internal" href="#src.ui.GUI.ImagePretrainScreen.Back"><code class="docutils literal notranslate"><span class="pre">ImagePretrainScreen.Back()</span></code></a></li>
+<li><a class="reference internal" href="#src.ui.GUI.ImagePretrainScreen.ImageProcessing"><code class="docutils literal notranslate"><span class="pre">ImagePretrainScreen.ImageProcessing()</span></code></a></li>
+<li><a class="reference internal" href="#src.ui.GUI.ImagePretrainScreen.findDrops"><code class="docutils literal notranslate"><span class="pre">ImagePretrainScreen.findDrops()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#src.ui.GUI.SelectScreen"><code class="docutils literal notranslate"><span class="pre">SelectScreen</span></code></a><ul>
+<li><a class="reference internal" href="#src.ui.GUI.SelectScreen.dragEnterEvent"><code class="docutils literal notranslate"><span class="pre">SelectScreen.dragEnterEvent()</span></code></a></li>
+<li><a class="reference internal" href="#src.ui.GUI.SelectScreen.dragMoveEvent"><code class="docutils literal notranslate"><span class="pre">SelectScreen.dragMoveEvent()</span></code></a></li>
+<li><a class="reference internal" href="#src.ui.GUI.SelectScreen.dropEvent"><code class="docutils literal notranslate"><span class="pre">SelectScreen.dropEvent()</span></code></a></li>
+<li><a class="reference internal" href="#src.ui.GUI.SelectScreen.open_folder"><code class="docutils literal notranslate"><span class="pre">SelectScreen.open_folder()</span></code></a></li>
+<li><a class="reference internal" href="#src.ui.GUI.SelectScreen.open_image"><code class="docutils literal notranslate"><span class="pre">SelectScreen.open_image()</span></code></a></li>
+<li><a class="reference internal" href="#src.ui.GUI.SelectScreen.set_image"><code class="docutils literal notranslate"><span class="pre">SelectScreen.set_image()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#src.ui.GUI.WelcomeScreen"><code class="docutils literal notranslate"><span class="pre">WelcomeScreen</span></code></a><ul>
+<li><a class="reference internal" href="#src.ui.GUI.WelcomeScreen.start_click"><code class="docutils literal notranslate"><span class="pre">WelcomeScreen.start_click()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#src.ui.GUI.detect_folder"><code class="docutils literal notranslate"><span class="pre">detect_folder()</span></code></a></li>
+<li><a class="reference internal" href="#src.ui.GUI.detect_image"><code class="docutils literal notranslate"><span class="pre">detect_image()</span></code></a></li>
+<li><a class="reference internal" href="#src.ui.GUI.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Water Drops Detection</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">src.ui.GUI module</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/src.ui.GUI.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-src.ui.GUI">
+<span id="src-ui-gui-module"></span><h1>src.ui.GUI module<a class="headerlink" href="#module-src.ui.GUI" title="Permalink to this heading"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="src.ui.GUI.EditScreen">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.ui.GUI.</span></span><span class="sig-name descname"><span class="pre">EditScreen</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">widget</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.ui.GUI.EditScreen" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">QMainWindow</span></code></p>
+<p>A class for the input image processing screen.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="src.ui.GUI.EditScreen.Back_button">
+<span class="sig-name descname"><span class="pre">Back_button</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#src.ui.GUI.EditScreen.Back_button" title="Permalink to this definition"></a></dt>
+<dd><p>A function to cancel the last processing action.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.ui.GUI.EditScreen.OK_button">
+<span class="sig-name descname"><span class="pre">OK_button</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.ui.GUI.EditScreen.OK_button" title="Permalink to this definition"></a></dt>
+<dd><p>Function to switch to the detection slide.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.ui.GUI.EditScreen.Rotate_button">
+<span class="sig-name descname"><span class="pre">Rotate_button</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#src.ui.GUI.EditScreen.Rotate_button" title="Permalink to this definition"></a></dt>
+<dd><p>Function for rotating the image by 90 degrees.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.ui.GUI.EditScreen.mouseMoveEvent">
+<span class="sig-name descname"><span class="pre">mouseMoveEvent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">eventQMouseEvent</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.ui.GUI.EditScreen.mouseMoveEvent" title="Permalink to this definition"></a></dt>
+<dd><p>A function for tracking the movement of the previously pressed mouse button
+on the widget with the image and building a rectangle for cropping.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.ui.GUI.EditScreen.mousePressEvent">
+<span class="sig-name descname"><span class="pre">mousePressEvent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">eventQMouseEvent</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.ui.GUI.EditScreen.mousePressEvent" title="Permalink to this definition"></a></dt>
+<dd><p>A function for tracking mouse clicks on a widget with an image.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.ui.GUI.EditScreen.mouseReleaseEvent">
+<span class="sig-name descname"><span class="pre">mouseReleaseEvent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">eventQMouseEvent</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.ui.GUI.EditScreen.mouseReleaseEvent" title="Permalink to this definition"></a></dt>
+<dd><p>A function for cropping the image along the resulting rectangle after pressing the mouse button.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="src.ui.GUI.FolderPretrainScreen">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.ui.GUI.</span></span><span class="sig-name descname"><span class="pre">FolderPretrainScreen</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">widget</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.ui.GUI.FolderPretrainScreen" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">QMainWindow</span></code></p>
+<p>A class for displaying the folder name before detecting it.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="src.ui.GUI.FolderPretrainScreen.Back">
+<span class="sig-name descname"><span class="pre">Back</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#src.ui.GUI.FolderPretrainScreen.Back" title="Permalink to this definition"></a></dt>
+<dd><p>Function to return to the previous slide.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.ui.GUI.FolderPretrainScreen.findDrops">
+<span class="sig-name descname"><span class="pre">findDrops</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.ui.GUI.FolderPretrainScreen.findDrops" title="Permalink to this definition"></a></dt>
+<dd><p>Function for switching to the detection slide.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="src.ui.GUI.FolderResultScreen">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.ui.GUI.</span></span><span class="sig-name descname"><span class="pre">FolderResultScreen</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_folder</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flag</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">widget</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.ui.GUI.FolderResultScreen" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">QMainWindow</span></code></p>
+<p>A class for the detection result display screen.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="src.ui.GUI.FolderResultScreen.changeMode">
+<span class="sig-name descname"><span class="pre">changeMode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">flag</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.ui.GUI.FolderResultScreen.changeMode" title="Permalink to this definition"></a></dt>
+<dd><p>Function for changing the result viewing mode.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.ui.GUI.FolderResultScreen.nextPhoto">
+<span class="sig-name descname"><span class="pre">nextPhoto</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">images</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.ui.GUI.FolderResultScreen.nextPhoto" title="Permalink to this definition"></a></dt>
+<dd><p>Function to view the next image, if available.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="src.ui.GUI.ImagePretrainScreen">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.ui.GUI.</span></span><span class="sig-name descname"><span class="pre">ImagePretrainScreen</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">widget</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.ui.GUI.ImagePretrainScreen" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">QMainWindow</span></code></p>
+<p>A class for the image display screen before detection.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="src.ui.GUI.ImagePretrainScreen.Back">
+<span class="sig-name descname"><span class="pre">Back</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#src.ui.GUI.ImagePretrainScreen.Back" title="Permalink to this definition"></a></dt>
+<dd><p>Function to return to the previous slide.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.ui.GUI.ImagePretrainScreen.ImageProcessing">
+<span class="sig-name descname"><span class="pre">ImageProcessing</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.ui.GUI.ImagePretrainScreen.ImageProcessing" title="Permalink to this definition"></a></dt>
+<dd><p>Function for switching to the image processing slide.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.ui.GUI.ImagePretrainScreen.findDrops">
+<span class="sig-name descname"><span class="pre">findDrops</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.ui.GUI.ImagePretrainScreen.findDrops" title="Permalink to this definition"></a></dt>
+<dd><p>Function for switching to the detection slide.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="src.ui.GUI.SelectScreen">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.ui.GUI.</span></span><span class="sig-name descname"><span class="pre">SelectScreen</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">widget</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.ui.GUI.SelectScreen" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">QMainWindow</span></code></p>
+<p>Class for the detection object selection screen.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="src.ui.GUI.SelectScreen.dragEnterEvent">
+<span class="sig-name descname"><span class="pre">dragEnterEvent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.ui.GUI.SelectScreen.dragEnterEvent" title="Permalink to this definition"></a></dt>
+<dd><p>A function that tracks the transfer of an image/folder to a widget.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.ui.GUI.SelectScreen.dragMoveEvent">
+<span class="sig-name descname"><span class="pre">dragMoveEvent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.ui.GUI.SelectScreen.dragMoveEvent" title="Permalink to this definition"></a></dt>
+<dd><p>A function that tracks the transfer of an image/folder to a widget.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.ui.GUI.SelectScreen.dropEvent">
+<span class="sig-name descname"><span class="pre">dropEvent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.ui.GUI.SelectScreen.dropEvent" title="Permalink to this definition"></a></dt>
+<dd><p>A function that captures the path of the image/folder on which drops want to be detected.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.ui.GUI.SelectScreen.open_folder">
+<span class="sig-name descname"><span class="pre">open_folder</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#src.ui.GUI.SelectScreen.open_folder" title="Permalink to this definition"></a></dt>
+<dd><p>A function for selecting a folder and going to the next page.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.ui.GUI.SelectScreen.open_image">
+<span class="sig-name descname"><span class="pre">open_image</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#src.ui.GUI.SelectScreen.open_image" title="Permalink to this definition"></a></dt>
+<dd><p>A function for selecting an image and going to the next page.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.ui.GUI.SelectScreen.set_image">
+<span class="sig-name descname"><span class="pre">set_image</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.ui.GUI.SelectScreen.set_image" title="Permalink to this definition"></a></dt>
+<dd><p>Function to move to the next slide if the image/folder has been moved to the widget.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="src.ui.GUI.WelcomeScreen">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.ui.GUI.</span></span><span class="sig-name descname"><span class="pre">WelcomeScreen</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">widget</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.ui.GUI.WelcomeScreen" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">QMainWindow</span></code></p>
+<p>The class of the original UI screen.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="src.ui.GUI.WelcomeScreen.start_click">
+<span class="sig-name descname"><span class="pre">start_click</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#src.ui.GUI.WelcomeScreen.start_click" title="Permalink to this definition"></a></dt>
+<dd><p>Function to go to the next page.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.ui.GUI.detect_folder">
+<span class="sig-prename descclassname"><span class="pre">src.ui.GUI.</span></span><span class="sig-name descname"><span class="pre">detect_folder</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filepath</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.ui.GUI.detect_folder" title="Permalink to this definition"></a></dt>
+<dd><p>Takes the path to the folder and the name of the folder to save the result and sends it to the function for detecting drops.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.ui.GUI.detect_image">
+<span class="sig-prename descclassname"><span class="pre">src.ui.GUI.</span></span><span class="sig-name descname"><span class="pre">detect_image</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filepath</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.ui.GUI.detect_image" title="Permalink to this definition"></a></dt>
+<dd><p>Takes the path to the image and the name of the folder to save the result and sends it to the function for detecting drops.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.ui.GUI.main">
+<span class="sig-prename descclassname"><span class="pre">src.ui.GUI.</span></span><span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#src.ui.GUI.main" title="Permalink to this definition"></a></dt>
+<dd><p>A function to launch the start screen.</p>
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, S.Volodina, A.Leisle, A.Shitenko.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
