@@ -76,6 +76,7 @@ python main.py
 ```
 
 Образ можно скачать с Docker Hub по ссылке: https://hub.docker.com/repository/docker/alincnl/drop_detection
+
 Либо можно склонировать репозиторий:
 ```
 git clone https://github.com/HerrPhoton/Water_drop_detection
